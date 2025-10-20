@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natal Oikumene Politeknik Negeri Medan 2025</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===== FONTS (Google) ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Poppins:wght@400;700&family=EB+Garamond:ital@1&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7rem 6%;
+      color: #fff;
+      animation: fadeDown 1s ease forwards;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    @keyframes fadeDown {
+      from {transform: translateY(-40px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .logo-container img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      border: 2px solid #00ff9d;
+      object-fit: cover;
+    }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #00ff9d;
+      text-shadow: 0 0 10px #00ff9d;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.6rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #ffd60a;
+      text-shadow: 0 0 10px #ffd60a;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: url('BG 2024.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: #fff;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(3px);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #f1c40f;
+      text-shadow: 0 0 15px #f1c40f;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .countdown div {
+      background: rgba(255,255,255,0.2);
+      padding: 1rem 1.3rem;
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+    }
+    .countdown span {
+      font-size: 2rem;
+      font-weight: bold;
+      display: block;
+    }
+    .countdown small {
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    /* INFO ACARA */
+    .info-acara {
+      background: rgba(255,255,255,0.05);
+      padding: 3rem 10%;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+    .info-acara h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #ffd60a;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .info-card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 15px;
+      padding: 1.5rem;
+      transition: 0.3s;
+    }
+    .info-card:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-5px);
+    }
+    .info-card h3 {
+      color: #8afa82;
+      margin-bottom: 0.5rem;
+    }
+    .info-card p {
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 10%;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #f1c40f;
+      position: relative;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #00ff9d;
+      margin: 0.5rem auto;
+      border-radius: 2px;
+    }
+    .btn {
+      display: inline-block;
+      background: #00ff9d;
+      color: #000;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+    .btn:hover {
+      background: #00e68a;
+      transform: scale(1.05);
+    }
+
+    /* PANITIA */
+    .panitia-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .panitia-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .person {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 1rem;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .person:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .person img {
+      width: 100%;
+      border-radius: 12px;
+      height: 250px;
+      object-fit: cover;
+    }
+    .person h3 {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #00ffcc;
+    }
+    .person p {
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    /* ===== THEMA (background gambar khusus di belakang teks tema) ===== */
+    .tema-background {
+      position: relative;
+      background: url('BG THEMA.jpg') center/cover no-repeat;
+      padding: 80px 20px;
+      text-align: center;
+      overflow: hidden;
+      border-top: 2px solid rgba(255,255,255,0.1);
+      border-bottom: 2px solid rgba(255,255,255,0.1);
+    }
+    .tema-background::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45); /* overlay supaya teks tetap terbaca */
+      backdrop-filter: blur(3px);
+      z-index: 0;
+    }
+    .tema-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ===== ANIMASI TEKS (dipastikan terdefinisi) ===== */
+    @keyframes glowGold {
+      0%, 100% { text-shadow: 0 0 10px #FFD700, 0 0 20px #ffea80, 0 0 30px #ffcf40; }
+      50% { text-shadow: 0 0 25px #fff0a0, 0 0 35px #FFD700, 0 0 45px #ffea80; }
+    }
+
+    @keyframes glowGradient {
+      0% { filter: drop-shadow(0 0 8px rgba(255, 200, 150, 0.4)); }
+      50% { filter: drop-shadow(0 0 20px rgba(255, 160, 120, 0.8)); }
+      100% { filter: drop-shadow(0 0 8px rgba(255, 200, 150, 0.4)); }
+    }
+
+    @keyframes glowVerse {
+      0%, 100% { text-shadow: 0 0 8px rgba(160,255,220,0.4); opacity: 0.9; }
+      50% { text-shadow: 0 0 20px rgba(160,255,220,0.9); opacity: 1; }
+    }
+
+    /* FOOTER */
+    footer {
+      background: #081c15;
+      color: #fff;
+      text-align: center;
+      padding: 1.8rem;
+      font-size: 0.9rem;
+    }
+    footer p {
+      opacity: 0.8;
+    }
+
+    /* ANIMASI SALJU (global) */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 1.2em;
+      animation: fall linear infinite;
+      z-index: 9999;
+      pointer-events: none;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {font-size: 2rem;}
+      .countdown span {font-size: 1.5rem;}
+      nav ul {gap: 1rem;}
+      .tema-background { padding: 60px 12px; }
+      .tema-content h1 { font-size: 36px; }
+      .tema-content h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <img src="logo 2025.jpg" alt="Logo Natal">
+      <div class="logo">Natal Oikumene Politeknik Negeri Medan 2025</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#acara">Acara</a></li>
+        <li><a href="#unggah">Unggah</a></li>
+        <li><a href="#proposal">Proposal</a></li>
+        <li><a href="#panitia">Panitia</a></li>
+        <li><a href="#tema">Tema</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="beranda" class="hero">
+    <div class="hero-content">
+      <h1>Menuju Natal Oikumene Politeknik Negeri Medan 2025</h1>
+      <div class="countdown" id="countdown">
+        <div><span id="days">00</span><small>Hari</small></div>
+        <div><span id="hours">00</span><small>Jam</small></div>
+        <div><span id="minutes">00</span><small>Menit</small></div>
+        <div><span id="seconds">00</span><small>Detik</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO ACARA -->
+  <section id="acara" class="info-acara">
+    <h2>Informasi Acara</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>📅 Tanggal Acara</h3>
+        <p>10 Desember 2025, Pukul 18.00 WIB</p>
+      </div>
+      <div class="info-card">
+        <h3>📍 Lokasi</h3>
+        <p>Auditorium Universitas Sumatera Utara</p>
+      </div>
+      <div class="info-card">
+        <h3>🎤 Pembicara</h3>
+        <p>Pdt. Dr. Maruhum Simanjuntak, M.Th</p>
+      </div>
+      <div class="info-card">
+        <h3>☎️ Kontak Panitia</h3>
+        <p>WA: 0831-0021-7608 <br>Email: natalpnm2025@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNGGAH -->
+  <section id="unggah">
+    <h2>Unggah Bukti Transfer</h2>
+    <div class="upload-box">
+      <img src="QR CODE.jpg" alt="Kode QR Pembayaran">
+      <p><strong>Scan kode QR di atas untuk melakukan pembayaran.</strong></p>
+      <p>Kemudian unggah bukti transfer di bawah ini:</p>
+      <input type="file" accept="image/*">
+      <br>
+      <a href="https://drive.google.com/drive/folders/1nqH5BLnp5lobljkIZi9BXPzdQaDscbgr?usp=drive_link" target="_blank" class="btn">Unggah Disini</a>
+      <br>
+      <a href="https://wa.me/083100217608?text=Halo,%20saya%20sudah%20melakukan%20pembayaran%20untuk%20acara%20Natal%20Oikumene." target="_blank" class="btn" style="background:#25D366;color:#fff;">Konfirmasi via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- PROPOSAL -->
+  <section id="proposal">
+    <h2>Proposal Natal Oikumene Politeknik Negeri Medan 2025</h2>
+    <p>Unduh proposal kegiatan lengkap pada link di bawah ini:</p>
+    <a href="https://drive.google.com/file/d/1b8C6_EJZmvYZFebmKiKX11vh_VncDBAr/view?usp=drive_link" target="_blank" class="btn">Unduh Disini</a>
+  </section>
+
+  <!-- PANITIA -->
+  <section id="panitia">
+    <h2>Daftar Panitia</h2>
+    <div class="panitia-container">
+      <div class="panitia-grid">
+        <div class="person">
+          <img src="KETUA.jpg" alt="Ketua Panitia" />
+          <h3>Prof. Dr. Kasrin Galingging Sp.Bu</h3>
+          <p>Ketua Panitia</p>
+        </div>
+        <div class="person">
+          <img src="WAKIL KETUA.jpg" alt="Wakil Ketua" />
+          <h3>Dr. Joi Arnold Galingging Ht.Ml</h3>
+          <p>Wakil Ketua</p>
+        </div>
+        <div class="person">
+          <img src="SEKERTARIS.jpg" alt="Sekretaris" />
+          <h3>Gilbert Betrando Simarmata</h3>
+          <p>Sekretaris</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEMA (GAMBAR DI BELAKANG TEPAT BAGIAN INI) -->
+  <section id="tema" class="tema-background">
+    <div class="tema-content">
+      <h2 style="
+        font-size: 44px;
+        font-weight: 700;
+        letter-spacing: 5px;
+        color: #FFD700;
+        animation: glowGold 3s ease-in-out infinite;
+        font-family: 'Playfair Display', serif;
+      ">“T H E M A”</h2>
+
+      <h1 style="
+        font-size: 52px;
+        font-weight: 800;
+        margin-top: 10px;
+        background: linear-gradient(90deg, #ffdf80, #ff6b6b, #ffd480);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glowGradient 4s ease-in-out infinite;
+        font-family: 'Great Vibes', cursive;
+      ">“Shine His Light in Your Heart”</h1>
+
+      <p style="
+        font-size: 22px;
+        font-style: italic;
+        color: #A8FFD1;
+        margin-top: 15px;
+        animation: glowVerse 4s ease-in-out infinite;
+        font-family: 'EB Garamond', serif;
+      ">(Matius 5:16)</p>
+    </div>
+  </section>
+
+  <audio autoplay loop>
+    <source src="carol of the bells.mp3" type="audio/mpeg">
+  </audio>
+
+  <footer>
+    <p>© 2025 Panitia Natal Oikumene Politeknik Negeri Medan. Semua hak dilindungi.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Countdown
+    const eventDate = new Date("2025-12-25T18:00:00").getTime();
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = eventDate - now;
+      if (diff <= 0) return clearInterval(countdown);
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      document.getElementById("days").textContent = d.toString().padStart(2,'0');
+      document.getElementById("hours").textContent = h.toString().padStart(2,'0');
+      document.getElementById("minutes").textContent = m.toString().padStart(2,'0');
+      document.getElementById("seconds").textContent = s.toString().padStart(2,'0');
+    }, 1000);
+
+    // Efek salju
+    const snowContainer = document.createElement('div');
+    snowContainer.id = 'snow-container';
+    document.body.appendChild(snowContainer);
+    for (let i = 0; i < 40; i++) {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.textContent = '❄';
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.animationDuration = (5 + Math.random() * 10) + 's';
+      snowflake.style.fontSize = (10 + Math.random() * 20) + 'px';
+      snowflake.style.opacity = (0.4 + Math.random() * 0.7).toFixed(2);
+      snowContainer.appendChild(snowflake);
+    }
+  </script>
+
+</body>
+</html>
